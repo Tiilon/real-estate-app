@@ -26,7 +26,9 @@ const login = async (userData) => {
 	};
 	const response = await axios.post(LOGIN_URL, userData, config);
 	if (response.data) {
-		localStorage.setItem("user", JSON.stringify(response.data));
+		// localStorage.setItem("user", JSON.stringify(response.data));
+		localStorage.setItem("access", JSON.stringify(response.data.access));
+		localStorage.setItem("refresh", JSON.stringify(response.data.refresh));
 	}
 	return response.data;
 };

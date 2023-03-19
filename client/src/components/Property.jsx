@@ -3,6 +3,7 @@ import { Badge, Button, Card, Col, Row } from "react-bootstrap";
 import { FaBed, FaShower } from "react-icons/fa";
 import { GiStairs } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { authAxios } from "../features/auth/httpService";
 
 const Property = ({ property }) => {
 	function numberWithCommas(x) {

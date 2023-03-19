@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import Property from "../components/Property";
 import Spinner from "../components/Spinner";
 import Title from "../components/Title";
 import { getProperties } from "../features/properties/propertySlice";
+
 
 const PropertiesPage = () => {
 	const { properties, isLoading, isError, message } = useSelector(
@@ -27,6 +28,7 @@ const PropertiesPage = () => {
 	return (
 		<>
 			<Title title="Our Properties Catalog" />
+
 			<Container>
 				<Row>
 					<Col className="mg-top text-center">
@@ -52,6 +54,7 @@ const PropertiesPage = () => {
 					</>
 				}
 			</Container>
+
 		</>
 	);
 };
